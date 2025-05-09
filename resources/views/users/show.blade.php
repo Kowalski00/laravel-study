@@ -1,24 +1,15 @@
-<!DOCTYPE html>
+@extends('layouts.default')
 
-<html lang="en">
+@section('title')
+    Usuário {{$user->name}}
+@endsection
 
-    <head>
+@section('content')
+    <h1>Mostrar usuário {{$user->name}}</h1>
 
-        <meta charset="UTF-8">
-
-        <meta name="viewport"
-
-            content="width=device-width">
-
-    </head>
-
-    <title>Document</title>
-
-    <body>
-
-        <h1>Mostrar usurário {{$user->name}}</h1>
-        {{dd($user)}}
-
-    </body>
-
-</html>
+        @if ($user->id === 1)
+           <div>Sim</div>
+        @else
+           <div>Nao</div>
+        @endif
+@endsection

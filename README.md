@@ -15,7 +15,10 @@ Como aprendizado está sendo seguido o curso https://www.udemy.com/course/larave
 
 - Os dados do banco estarão presentes no arquivo `.env`:
 ```
-    DB_DATABASE=nome_do_banco_de_dados
-    DB_USERNAME=usuario_do_banco
-    DB_PASSWORD=senha_do_banco
+    DB_CONNECTION=mysql
+    DB_HOST=*localhost*
+    DB_PORT=*porta*
+    DB_DATABASE=*nome*
+    DB_USERNAME=*usuario*
+    DB_PASSWORD=*senha*
 ```

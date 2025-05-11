@@ -22,5 +22,17 @@ class UserController extends Controller {
         ]);
     }
 
+    public function create() {
+        return view('users.create');
+    }
 
+    public function store(Request $request) {
+        $input = $request->validate([
+            'name' => 'required'
+            , 'email' => 'required|email'
+            , 'password' => 'required|min:3'
+        ]);
+        User::create($input);
+        return redirect()->back();
+    }
 }

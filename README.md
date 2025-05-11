@@ -2,7 +2,7 @@
 
 Como aprendizado está sendo seguido o curso https://www.udemy.com/course/laravel-pro-do-basico-ao-avancado/
 
-## Stack
+## Stacks utilizadas no aprendizado
 
   - PHP 11/12
   - Herd
@@ -10,6 +10,8 @@ Como aprendizado está sendo seguido o curso https://www.udemy.com/course/larave
   - Node.js
   - MySQL e MySQL WorkBench
   - Git
+  - Artisan
+  - Eloquent
 
 ## DB
 

@@ -65,10 +65,7 @@ npm i --save-dev sass
 
 - Em \resources modificar o folder '\css' para '\scss'. Agora dentro do folder \scss, modificar o arquivo `app.css` para `app.scss`. Isso permitirá que o Vite reconhecer o arquivo como Sass para realizar a compilação.
 
-- Dentro do arquivo `app.scss`, adicionar a linha:
-```
-@import 'bootstrap';
-```
+- Dentro do arquivo `app.scss`, não há necessidade de importar o Bootstrap pois o AdminLTE suprirá essa situação.
 
 - No folder \resources\js, adicionar a seguinte linha no arquivo `app.js`:
 ```
@@ -100,6 +97,23 @@ plugins: [
         @vite('resources/js/app.js')
     </body>
 </html>
+```
+
+## AdminLTE
+
+ - Instalar com o comando:
+```
+npm install admin-lte
+```
+
+- No folder \resources\js, adicionar a seguinte linha no arquivo `app.js`:
+```
+import 'admin-lte';
+```
+
+- Dentro do arquivo `app.scss`, adicionar a linha:
+```
+@import 'admin-lte';
 ```
 
 

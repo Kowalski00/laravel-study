@@ -5,7 +5,16 @@ export default defineConfig({
     plugins: [
         laravel({
             input: ['resources/scss/app.scss', 'resources/js/app.js'],
-            refresh: true,
+            refresh: [
+                'resources/routes/**',
+                'routes/**',
+                'resources/views/**',
+            ],
         })
-    ],
+    ]
+    , server: {
+        watch: {
+            usePolling: true
+        }
+    }
 });

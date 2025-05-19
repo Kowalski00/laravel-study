@@ -153,7 +153,9 @@
               class="user-image rounded-circle shadow"
               alt="User Image"
             />
-            <span class="d-none d-md-inline">{{ auth()->user()->name }}</span>
+            @if(auth()->user() != null)
+                <span class="d-none d-md-inline">{{ auth()->user()->name }}</span>
+            @endif
           </a>
           <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
             <!--begin::User Image-->
@@ -164,7 +166,9 @@
                 alt="User Image"
               />
               <p>
+                @if(auth()->user() != null)
                 {{ auth()->user()->name }}
+                @endif
                 <small>Member since Nov. 2023</small>
               </p>
             </li>

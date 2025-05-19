@@ -13,6 +13,11 @@
         <p class="login-box-msg">Sign in to start your session</p>
         <form action="{{ route('login') }}" method="post">
             @csrf
+            @session('status')
+            <div class="alert alert-success">
+                {{$value}}
+            </div>
+            @endsession
           <div class="input-group mb-3">
             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
             <input type="email" name="email" class="form-control @error('email') is-invalid @enderror " placeholder="Email" value="{{ old('email') }}" />

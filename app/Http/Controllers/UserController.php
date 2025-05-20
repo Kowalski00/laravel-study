@@ -10,29 +10,24 @@ class UserController extends Controller {
 
     public function index() {
         $users = User::all();
-        return view('users.index',[
-            'greeting' => 'Hello World!'
-            , 'users' => $users
-        ]);
+        return view('users.index', compact('users'));
     }
 
-    public function getUser(User $user) {
-        return view('users.show', [
-            'user' => $user
-        ]);
-    }
-
-    public function create() {
+    public function create()
+    {
         return view('users.create');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $input = $request->validate([
             'name' => 'required'
             , 'email' => 'required|email'
-            , 'password' => 'required|min:3'
+            , 'password' => 'required'
         ]);
+
         User::create($input);
-        return redirect()->back();
+
+        return redirect()->route('users.index')->with('status','Usuário adicionado com sucesso!');
     }
 }
